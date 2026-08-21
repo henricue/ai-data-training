@@ -12,6 +12,9 @@ dependencies = [
     "fmiopendata",
     "pandas>=2.0",
     "plotly",
+    "scikit-learn",
+    "scipy",
+    "statsmodels",
     "streamlit",
 ]
 
