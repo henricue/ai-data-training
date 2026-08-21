@@ -13,6 +13,7 @@ tasoon sopivina.
   käytä ensisijaisesti Pythonia ja pandas-kirjastoa.
 - Älä lisää uusia riippuvuuksia ilman selkeää tarvetta.
 - Älä muuta alkuperäistä raakadataa. Tallenna käsitelty data erikseen.
+- Noudata harjoituksen `DATA_CONTRACT.md`-tiedostoa, jos sellainen on.
 - Tarkista tekemäsi muutos ajamalla siihen sopiva komento tai testi.
 - Kerro lopuksi, mitä muuttui ja miten käyttäjä voi kokeilla tulosta.
 

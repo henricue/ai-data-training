@@ -10,6 +10,11 @@ koulutusmateriaali lisätään myöhemmin.
 ## Harjoitukset
 
 - [Harjoitus 1: Peruskäyttö](harjoitukset/01-munakello/README.md)
+- [Harjoitus 2: Datan lataus ja esikäsittely](harjoitukset/02-datan-esikasittely/README.md)
+
+Harjoituksissa 2–6 tutkitaan kysymystä:
+
+> Miten sää vaikuttaa kaupunkipyörien kysyntään?
 
 ## Koulutuksen runko
 
