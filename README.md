@@ -1,11 +1,6 @@
 # Agenttinen koodaus data-analyytikoille
 
-Tämä repositorio toimii kahden päivän koulutusympäristönä data-analyytikoille,
-jotka kokeilevat agenttista koodausta ensimmäisiä kertoja. Harjoituksissa
-käytetään Pythonia, pandas-kirjastoa ja HSL:n avointa dataa.
-
-Repo on vasta alkuvaiheessa. Muut harjoitukset, esimerkkidata ja muu
-koulutusmateriaali lisätään myöhemmin.
+Tämä repositorio toimii agenttisen koodauksen koulutuksen työympäristönä. Jokainen harjoitus on omassa hakemistossaan.
 
 ## Harjoitukset
 
@@ -20,60 +15,56 @@ Harjoituksissa 2–6 tutkitaan kysymystä:
 
 > Miten sää vaikuttaa kaupunkipyörien kysyntään?
 
-## Koulutuksen runko
-
-### 1. aamupäivä
-
-- Aamupala ja avaus
-- Esitys: AI-työkalujen käytön perusperiaatteet ja hyödyt
-- Harjoitus 1: AI:n peruskäyttö ja eri moodit
-- Harjoitus 2: Datan lataus ja esikäsittely
-- Demo: Itsepalveluanalytiikka
-- Harjoitus 3: Eksploratiivinen analyysi
-- Lopetus: Reaktorin opit eri projekteista ja päivän kertaus
-
-### 2. aamupäivä
-
-- Aamupala ja avaus
-- Esitys: Laadunvarmistus ja miltä uusi arki näyttää
-- Harjoitus 4: Visualisointien laatiminen
-- Harjoitus 5: Tilastollisten mallien teko
-- Demo: Usean agentin käyttö rinnakkain
-- Harjoitus 6: Raportointi
-- Lopetus: Päivän kertaus ja itsenäisen oppimisen jatkaminen
-
-Jokainen harjoitus alkaa ohjeistuksella ja päättyy yhteiseen yhteenvetoon.
-Harjoitukset suunnitellaan siten, että osallistuja voi tarvittaessa osallistua
-vain osaan päivän ohjelmasta.
-
 ## Käyttöönotto
 
-Tarvitset Python 3.11:n tai uudemman sekä `make`-komennon.
+### 1. Kloonaa repositorio
 
-Luo virtuaaliympäristö ja asenna Python-riippuvuudet sekä Typst:
+Kloonaa repositorio ja siirry sen hakemistoon:
+
+```bash
+git clone https://github.com/henricue/ai-data-training.git
+cd ai-data-training
+```
+
+### 2. Avaa repositorio Codexissa ja editorissa
+
+Avaa Codex-sovellus, valitse **Open Folder** ja valitse kloonaamasi
+`ai-data-training`-hakemisto.
+
+Avaa hakemisto myös VSCodessa muutosten helpompaa tarkastelua varten:
+
+```bash
+code .
+```
+
+Voit käyttää myös muuta editoria. Jos komento ei toimi, avaa editori ja valitse
+**Open Folder** tai **Avaa kansio**, ja valitse `ai-data-training`-hakemisto.
+
+### 3. Asenna työkalut
+
+Tarvitset Python 3.11:n tai uudemman sekä `make`-komennon. Avaa editorin
+terminaali ja suorita:
 
 ```bash
 make setup
 ```
 
-Tarkista asennus:
+Komento luo Python-virtuaaliympäristön ja asentaa harjoituksissa tarvittavat
+Python-riippuvuudet sekä Typstin.
+
+### 4. Tarkista asennus
 
 ```bash
 make verify
 ```
 
-Aktivoi ympäristö omaa työskentelyä varten:
+### 5. Aktivoi ympäristö
+
+Aktivoi virtuaaliympäristö aina, kun aloitat uuden työskentelysession:
 
 ```bash
 source .venv/bin/activate
 ```
 
 Typstiä käytetään harjoituksessa 6 diaesitysmuotoisen PDF-raportin
-tuottamiseen. `make setup` asentaa sen virtuaaliympäristöön, joten erillistä
-asennusta ei tarvita.
-
-## Data
-
-Koulutuksessa käytettävä aineisto valitaan HSL:n avoimista aineistoista.
-Aineiston lähde, käyttöehdot ja käsittelyvaiheet dokumentoidaan ennen sen
-lisäämistä repoon. Lisätietoja on [HSL:n avoimen datan sivulla](https://www.hsl.fi/hsl/avoin-data).
+tuottamiseen. Sen erillistä asentamista ei tarvita.

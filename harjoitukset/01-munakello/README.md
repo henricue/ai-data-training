@@ -33,11 +33,11 @@ Tarkemmat lähtövaatimukset ovat tiedostossa [SPEC.md](SPEC.md).
 ### 1. Tutustu speksiin
 
 Pyydä agenttia lukemaan `SPEC.md` ja etsimään siitä epäselviä kohtia. Pyydä
-sitä olemaan vielä toteuttamatta sovellusta.
+sitä olemaan vielä toteuttamatta sovellusta. Tiedoston voi liittää promptiin @-merkillä.
 
 Voit aloittaa esimerkiksi näin:
 
-> Lue tämän hakemiston SPEC.md. Älä toteuta sovellusta vielä. Kerro, mitkä
+> Lue tämän hakemiston @SPEC.md. Älä toteuta sovellusta vielä. Kerro, mitkä
 > vaatimukset ovat epäselviä, ja kysy minulta enintään viisi tarkentavaa
 > kysymystä.
 
@@ -59,7 +59,8 @@ Voit käyttää esimerkiksi tätä kehotetta:
 
 ### 4. Ota uusi sessio ja toteuta
 
-Avaa agentin kanssa uusi sessio. Uusi sessio ei tunne aiempaa keskustelua,
+Avaa agentin kanssa uusi sessio, jotta konteksti puhdistuu.
+Uusi sessio ei tunne aiempaa keskustelua,
 joten ohjaa agentti tiedostoihin tallennetun kontekstin äärelle:
 
 > Lue tämän hakemiston SPEC.md ja PLAN.md. Toteuta suunnitelma tiedostoon
