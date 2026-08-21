@@ -12,6 +12,7 @@ koulutusmateriaali lisätään myöhemmin.
 - [Harjoitus 1: Peruskäyttö](harjoitukset/01-munakello/README.md)
 - [Harjoitus 2: Datan lataus ja esikäsittely](harjoitukset/02-datan-esikasittely/README.md)
 - [Harjoitus 3: Eksploratiivinen analyysi](harjoitukset/03-eksploratiivinen-analyysi/README.md)
+- [Harjoitus 4: Visualisointien laatiminen](harjoitukset/04-visualisoinnit/README.md)
 
 Harjoituksissa 2–6 tutkitaan kysymystä:
 
