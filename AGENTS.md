@@ -9,7 +9,8 @@ tasoon sopivina.
 - Keskustele käyttäjän kanssa suomeksi, ellei käyttäjä pyydä muuta.
 - Selitä lyhyesti, mitä olet tekemässä ja miksi.
 - Tee pieniä ja helposti tarkistettavia muutoksia.
-- Käytä ensisijaisesti Pythonia ja pandas-kirjastoa.
+- Käytä harjoituksen määrittelemää teknologiaa. Data-analyysiharjoituksissa
+  käytä ensisijaisesti Pythonia ja pandas-kirjastoa.
 - Älä lisää uusia riippuvuuksia ilman selkeää tarvetta.
 - Älä muuta alkuperäistä raakadataa. Tallenna käsitelty data erikseen.
 - Tarkista tekemäsi muutos ajamalla siihen sopiva komento tai testi.

@@ -4,8 +4,12 @@ Tämä repositorio toimii kahden päivän koulutusympäristönä data-analyytiko
 jotka kokeilevat agenttista koodausta ensimmäisiä kertoja. Harjoituksissa
 käytetään Pythonia, pandas-kirjastoa ja HSL:n avointa dataa.
 
-Repo on vasta alkuvaiheessa. Harjoitusten ohjeet, esimerkkidata ja muu
+Repo on vasta alkuvaiheessa. Muut harjoitukset, esimerkkidata ja muu
 koulutusmateriaali lisätään myöhemmin.
+
+## Harjoitukset
+
+- [Harjoitus 1: Peruskäyttö](harjoitukset/01-munakello/README.md)
 
 ## Koulutuksen runko
 
