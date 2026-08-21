@@ -14,6 +14,7 @@ koulutusmateriaali lisätään myöhemmin.
 - [Harjoitus 3: Eksploratiivinen analyysi](harjoitukset/03-eksploratiivinen-analyysi/README.md)
 - [Harjoitus 4: Visualisointien laatiminen](harjoitukset/04-visualisoinnit/README.md)
 - [Harjoitus 5: Tilastollisten mallien laatiminen](harjoitukset/05-tilastolliset-mallit/README.md)
+- [Harjoitus 6: Raportointi](harjoitukset/06-raportointi/README.md)
 
 Harjoituksissa 2–6 tutkitaan kysymystä:
 
@@ -49,7 +50,7 @@ vain osaan päivän ohjelmasta.
 
 Tarvitset Python 3.11:n tai uudemman sekä `make`-komennon.
 
-Luo virtuaaliympäristö ja asenna riippuvuudet:
+Luo virtuaaliympäristö ja asenna Python-riippuvuudet sekä Typst:
 
 ```bash
 make setup
@@ -66,6 +67,10 @@ Aktivoi ympäristö omaa työskentelyä varten:
 ```bash
 source .venv/bin/activate
 ```
+
+Typstiä käytetään harjoituksessa 6 diaesitysmuotoisen PDF-raportin
+tuottamiseen. `make setup` asentaa sen virtuaaliympäristöön, joten erillistä
+asennusta ei tarvita.
 
 ## Data
 
