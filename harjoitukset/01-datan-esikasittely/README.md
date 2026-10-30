@@ -1,15 +1,15 @@
-# Harjoitus 2: Datan lataus ja esikäsittely
+# Harjoitus 1: Datan lataus ja esikäsittely
 
 Tutkimuskysymys:
 
-> Miten sää vaikuttaa kaupunkipyörien kysyntään?
+> Missä verkko pätkii?
 
 ## Tehtävä
 
 1. Pyydä agenttia lataamaan tarvittava data:
-   - [HSL:n avoin data](https://www.hsl.fi/hsl/avoin-data)
-   - [Ilmatieteen laitoksen säähavainnot](https://opendata.fmi.fi/wfs?request=GetCapabilities)
-2. Yhdistä aineistot päivätasolla.
+   - [Bittimittarin tulokset 09/2026](https://opendata.traficom.fi/Content/Bittimittari/Bittimittari-2026-09.zip)
+   - [Kuntien väestötiedot](https://pxdata.stat.fi/PxWeb/pxweb/fi/Kuntien_avainluvut/Kuntien_avainluvut__2026/kuntien_avainluvut_2026_viimeisin.px)
+2. Yhdistä aineistot yhteen taulukkoon.
 3. Tarkista puuttuvat arvot ja aineiston käyttökelpoisuus.
 4. Koosta työvaiheista uudelleenajettava Python-skripti.
 
@@ -21,8 +21,8 @@ seuraavissa harjoituksissa.
 Harjoituksen lopussa sinulla tulee olla:
 
 - `scripts/prepare_data.py`
-- `data/processed/citybike_weather_daily.csv`
+- `data/processed/network_speed.csv`
 - skriptin tulostama yhteenveto aineiston laadusta
 
 Tarkista lopuksi, että skriptin voi ajaa uudelleen ja että CSV:ssä on odotetut
-sarakkeet, päivämäärät ja arvot.
+sarakkeet ja arvot.

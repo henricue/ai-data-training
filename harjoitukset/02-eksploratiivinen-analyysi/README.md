@@ -1,12 +1,12 @@
-# Harjoitus 3: Eksploratiivinen analyysi
+# Harjoitus 2: Eksploratiivinen analyysi
 
 Tutkimuskysymys:
 
-> Miten sää vaikuttaa kaupunkipyörien kysyntään?
+> Missä verkko pätkii?
 
 ## Tehtävä
 
-1. Pyydä agenttia tutustumaan harjoituksessa 2 muodostettuun aineistoon.
+1. Pyydä agenttia tutustumaan harjoituksessa 1 muodostettuun aineistoon.
 2. Selvitä, millaisia analyysejä aineistolla voidaan tehdä.
 3. Valitse olennaisimmat tunnusluvut ja kokoa ne taulukoksi.
 4. Tunnista datan puutteet ja analyysin rajoitteet.
@@ -17,5 +17,10 @@ Tutkimuskysymys:
 Käytä raportin pohjana [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md)-tiedostoa.
 
 Jos oma aineisto ei ole käytettävissä, voit käyttää
-`data/reference/citybike_weather_daily.csv`-tiedostoa.
+`data/reference/network_speed.csv`-tiedostoa. Sarakkeet ja käsittelysäännöt on
+kuvattu [aineistosopimuksessa](../01-datan-esikasittely/DATA_CONTRACT.md).
 
+## Lopputulos
+
+- `scripts/explore_data.py`
+- raportti, joka perustuu raporttipohjaan

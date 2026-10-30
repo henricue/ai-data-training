@@ -4,67 +4,104 @@ Tämä repositorio toimii agenttisen koodauksen koulutuksen työympäristönä. 
 
 ## Harjoitukset
 
-- [Harjoitus 1: Peruskäyttö](harjoitukset/01-munakello/README.md)
-- [Harjoitus 2: Datan lataus ja esikäsittely](harjoitukset/02-datan-esikasittely/README.md)
-- [Harjoitus 3: Eksploratiivinen analyysi](harjoitukset/03-eksploratiivinen-analyysi/README.md)
-- [Harjoitus 4: Visualisointien laatiminen](harjoitukset/04-visualisoinnit/README.md)
-- [Harjoitus 5: Tilastollisten mallien laatiminen](harjoitukset/05-tilastolliset-mallit/README.md)
-- [Harjoitus 6: Raportointi](harjoitukset/06-raportointi/README.md)
+- [Harjoitus 0: Peruskäyttö](harjoitukset/00-warmup-munakello/README.md)
+- [Harjoitus 1: Datan lataus ja esikäsittely](harjoitukset/01-datan-esikasittely/README.md)
+- [Harjoitus 2: Eksploratiivinen analyysi](harjoitukset/02-eksploratiivinen-analyysi/README.md)
+- [Harjoitus 3: Visualisointien laatiminen](harjoitukset/03-visualisoinnit/README.md)
 
-Harjoituksissa 2–6 tutkitaan kysymystä:
+Harjoituksissa 1–X tutkitaan kysymystä:
 
-> Miten sää vaikuttaa kaupunkipyörien kysyntään?
+> Missä verkko pätkii?
 
-## Käyttöönotto
+## Valmistelut
 
 ### 1. Kloonaa repositorio
 
-Kloonaa repositorio ja siirry sen hakemistoon:
+Avaa PowerShell tai terminaali ja suorita:
 
-```bash
+```powershell
 git clone https://github.com/henricue/ai-data-training.git
 cd ai-data-training
 ```
 
-### 2. Avaa repositorio Codexissa ja editorissa
+### 2. Avaa repositorio VSCodessa
 
-Avaa Codex-sovellus, valitse **Open Folder** ja valitse kloonaamasi
+Avaa VSCode, valitse **Open Folder** ja valitse kloonaamasi
 `ai-data-training`-hakemisto.
 
-Avaa hakemisto myös VSCodessa muutosten helpompaa tarkastelua varten:
+Tai vaihtoehtoisesti terminaalissa:
 
-```bash
+```powershell
 code .
 ```
 
-Voit käyttää myös muuta editoria. Jos komento ei toimi, avaa editori ja valitse
-**Open Folder** tai **Avaa kansio**, ja valitse `ai-data-training`-hakemisto.
+## Käyttöönotto
 
-### 3. Asenna työkalut
+Valitse käyttöjärjestelmäsi mukainen ohje:
 
-Tarvitset Python 3.11:n tai uudemman sekä `make`-komennon. Avaa editorin
-terminaali ja suorita:
+- [Windows](#windows)
+- [macOS / Linux](#macos--linux)
+
+Molemmissa tarvitset Python 3.11:n tai uudemman. Asennus ei vaadi
+järjestelmänvalvojan oikeuksia.
+
+## Windows
+
+### 1. Asenna Python
+
+Jos Pythonia ei ole, asenna se Microsoft Storesta tai osoitteesta
+python.org (valitse "Install for current user").
+
+### 2. Asenna työkalut
+
+Avaa editorin terminaali ja suorita:
+
+```powershell
+py scripts/setup.py
+```
+
+Jos `py` ei toimi, käytä komentoa `python scripts/setup.py`. Komento luo
+Python-virtuaaliympäristön `.venv` ja asentaa harjoituksissa tarvittavat
+riippuvuudet.
+
+### 3. Tarkista asennus
+
+```powershell
+py scripts/setup.py --verify
+```
+
+### 4. Käytä ympäristöä
+
+Aja komennot suoraan ympäristön Pythonilla. Aktivointia ei tarvita, ja se
+toimii myös silloin, kun PowerShell estää aktivointiskriptin:
+
+```powershell
+.venv\Scripts\python -m streamlit run harjoitukset/03-visualisoinnit/app.py
+```
+
+## macOS / Linux
+
+### 1. Asenna työkalut
+
+Avaa editorin terminaali ja suorita:
 
 ```bash
 make setup
 ```
 
-Komento luo Python-virtuaaliympäristön ja asentaa harjoituksissa tarvittavat
-Python-riippuvuudet sekä Typstin.
+Komento luo Python-virtuaaliympäristön `.venv` ja asentaa harjoituksissa tarvittavat
+riippuvuudet.
 
-### 4. Tarkista asennus
+### 2. Tarkista asennus
 
 ```bash
 make verify
 ```
 
-### 5. Aktivoi ympäristö
+### 3. Käytä ympäristöä
 
-Aktivoi virtuaaliympäristö aina, kun aloitat uuden työskentelysession:
+Aktivoi virtuaaliympäristö:
 
 ```bash
 source .venv/bin/activate
 ```
-
-Typstiä käytetään harjoituksessa 6 diaesitysmuotoisen PDF-raportin
-tuottamiseen. Sen erillistä asentamista ei tarvita.

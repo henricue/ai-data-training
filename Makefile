@@ -1,19 +1,14 @@
 PYTHON ?= python3
-VENV := .venv
-VENV_PYTHON := $(VENV)/bin/python
-TYPST := $(VENV)/bin/typst
-TYPST_VERSION ?= 0.15.1
+VENV_PYTHON := .venv/bin/python
 
 .PHONY: setup verify data
 
+# Windowsilla ilman makea: python scripts/setup.py
 setup:
-	$(PYTHON) -m venv $(VENV)
-	$(VENV_PYTHON) -m pip install -e .
-	bash scripts/install_typst.sh $(TYPST) $(TYPST_VERSION)
+	$(PYTHON) scripts/setup.py
 
 verify:
-	$(VENV_PYTHON) -c "import pandas as pd; print(f'pandas {pd.__version__} toimii')"
-	$(TYPST) --version
+	$(PYTHON) scripts/setup.py --verify
 
 data:
 	$(VENV_PYTHON) scripts/prepare_data.py
