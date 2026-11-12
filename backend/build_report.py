@@ -51,12 +51,19 @@ def format_percentage(value):
     return f"{value * 100:.1f} %"
 
 
+def parse_location(row):
+    """Return the accident location as (north, east) coordinates."""
+    # Convert the coordinates to numbers
+    return float(row["pohj_etrs"]), float(row["ita_etrs"])
+
+
 def build_report(rows):
     """Build the report dictionary from the rows."""
     totals_by_year = Counter()
     injuries_by_year = Counter()
     totals_by_type = Counter()
     injuries_by_type = Counter()
+    locations = []  # TODO: alueellinen tarkastelu (backlog 0004)
 
     # loop over all rows
     for row in rows:
@@ -64,6 +71,8 @@ def build_report(rows):
         accident_type = row["LAJI"]
         # Check if the accident caused an injury
         injury = row["VAKAV_A"] == "1"
+        # Read the location
+        locations.append(parse_location(row))
 
         # Increment the totals
         totals_by_year[year] += 1
