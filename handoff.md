@@ -5,12 +5,11 @@ Vastataan viestinnän kysymykseen "Onko pyöräily turvallisempaa kuin ennen?" (
 
 ## Tila
 - Toimeksianto on grillattu, ja suunnitelma on backlogissa: tehtävät 0007–0010.
-- Raporttia ei ole ajettu uudelleen koordinaattimuutoksen (0004) jälkeen.
+- Raportin viat on korjattu ja luvut tarkistettu (0006); raportti on ajettu uudelleen.
 
 ## Päätökset
 - Vertaillaan vain onnettomuuksia, jotka johtivat loukkaantumiseen tai kuolemaan.
 - Rajoitukset kerrotaan vastauksen yhteydessä (0008).
 
 ## Seuraavaksi
-Aja raportti uudelleen ja tarkista sen luvut `data/README.md`:n tunnettuja lukuja vasten ennen
-kuin aloitat tehtävää 0007.
+Aloita tehtävästä 0007 (pyöräonnettomuudet vuosittain).

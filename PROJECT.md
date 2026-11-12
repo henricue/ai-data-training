@@ -11,7 +11,8 @@ tulla pohja myöhemmille kysymyksille, esimerkiksi pyöräilystä ja alueista.
 - Raportti laskee onnettomuudet vuosittain ja lajeittain (backlog 0001).
 - Sivu näyttää tunnusluvut, vuosikaavion ja lajitaulukon (0002) sekä lajisuodattimen (0003).
 - Data on päivitetty vuoteen 2025 asti (`data/README.md`).
-- Koordinaattien käsittely on aloitettu (0004), mutta se on kesken.
+- Koordinaatit luetaan (0004); kolmelta riviltä puuttuva koordinaatti ohitetaan. Alueellinen tarkastelu on vielä tekemättä.
+- Luvut on tarkistettu `data/README.md`:n tunnettuja lukuja vasten (0006).
 
 ## Päätökset
 
@@ -22,7 +23,5 @@ tulla pohja myöhemmille kysymyksille, esimerkiksi pyöräilystä ja alueista.
 
 ## Mistä jatketaan
 
-- Aloitin koordinaattien käsittelyn alueellista tarkastelua varten (backlog 0004).
-  Raporttia ei ole ajettu uudelleen tämän muutoksen jälkeen, joten `public/report.json` on vielä
-  edellisen ajon tulos.
-- Seuraava pieni tehtävä on 0005: lähde ja lisenssi sivun alaosaan.
+- Raportti on ajettu uudelleen korjausten jälkeen, ja `public/report.json` on ajan tasalla.
+- Seuraavaksi pyöräilykysymys: backlog 0007–0010 (toimeksianto 1).
