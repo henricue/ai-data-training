@@ -1,107 +1,154 @@
-# Agenttinen koodaus data-analyytikoille
+# 🚦 Onnettomuusraportti – Helsingin liikenneturvallisuus datan valossa
 
-Tämä repositorio toimii agenttisen koodauksen koulutuksen työympäristönä. Jokainen harjoitus on omassa hakemistossaan.
+Tervetuloa Onnettomuusraportti-projektiin! Tämä projekti on kattava, moderni ja helppokäyttöinen
+ratkaisu Helsingin liikenneonnettomuuksien analysointiin ja visualisointiin. Projektin avulla
+kuka tahansa voi saada nopeasti ja vaivattomasti arvokkaita näkemyksiä liikenneturvallisuudesta.
 
-## Harjoitukset
+## 📌 Sisällysluettelo
 
-- [Harjoitus 0: Peruskäyttö](harjoitukset/00-warmup-munakello/README.md)
-- [Harjoitus 1: Datan lataus ja esikäsittely](harjoitukset/01-datan-esikasittely/README.md)
-- [Harjoitus 2: Eksploratiivinen analyysi](harjoitukset/02-eksploratiivinen-analyysi/README.md)
-- [Harjoitus 3: Visualisointien laatiminen](harjoitukset/03-visualisoinnit/README.md)
+1. Johdanto
+2. Projektin tausta
+3. Ominaisuudet
+4. Arkkitehtuuri
+5. Asennus
+6. Käyttö
+7. Ajaminen
+8. Data
+9. Hakemistorakenne
+10. Usein kysytyt kysymykset
+11. Tulevaisuuden visio
+12. Kiitokset
 
-Harjoituksissa 1–X tutkitaan kysymystä:
+## 1. Johdanto
 
-> Missä verkko pätkii?
+Liikenneturvallisuus on tärkeä asia. Onnettomuuksien ymmärtäminen auttaa tekemään parempia
+päätöksiä. Tämä projekti auttaa ymmärtämään onnettomuuksia datan avulla. Data on tärkeää, ja
+siksi tämä projekti hyödyntää dataa monipuolisesti.
 
-## Valmistelut
+Projektin tavoitteena on tarjota selkeä, luotettava ja visuaalisesti miellyttävä näkymä
+Helsingin liikenneonnettomuuksiin. Raportti on suunniteltu sekä asiantuntijoille että
+satunnaisille käyttäjille.
 
-### 1. Kloonaa repositorio
+## 2. Projektin tausta
 
-Avaa PowerShell tai terminaali ja suorita:
+Projekti sai alkunsa tarpeesta ymmärtää paremmin liikenneonnettomuuksia. Aiemmin tieto oli
+hajallaan, ja sen kokoaminen vei aikaa. Nyt kaikki tieto on yhdessä paikassa.
 
-```powershell
-git clone https://github.com/henricue/ai-data-training.git
-cd ai-data-training
+Data kattaa vuodet 2000–2023, ja se päivitetään kerran vuodessa. Raportti näyttää kaikki
+poliisin tietoon tulleet onnettomuudet.
+
+## 3. Ominaisuudet
+
+- ✅ Onnettomuuksien määrä vuosittain
+- ✅ Onnettomuudet lajeittain
+- ✅ Loukkaantumiseen tai kuolemaan johtaneiden onnettomuuksien osuus
+- ✅ Interaktiivinen vuosikaavio
+- ✅ Lajisuodatin URL-parametrilla
+- ✅ Nopea ja kevyt
+- ✅ Ei riippuvuuksia
+- ✅ Toimii kaikilla moderneilla selaimilla
+- ✅ Helppo laajentaa
+
+## 4. Arkkitehtuuri
+
+Projekti noudattaa modernia, kerroksellista arkkitehtuuria:
+
+1. **Datakerros:** `data/onnettomuudet.csv` sisältää lähdeaineiston.
+2. **Käsittelykerros:** `backend/build_report.py` lukee datan ja laskee raportin.
+3. **Rajapintakerros:** `public/report.json` toimii rajapintana backendin ja frontendin välillä.
+4. **Esityskerros:** `public/index.html` ja `public/app.js` näyttävät raportin selaimessa.
+
+Tämä arkkitehtuuri mahdollistaa kerrosten itsenäisen kehittämisen, testaamisen ja
+skaalaamisen. Kerrokset ovat löyhästi kytkettyjä, mikä tekee järjestelmästä joustavan.
+
+## 5. Asennus
+
+Projekti ei vaadi asennuksia. Tarvitset vain Pythonin (versio 3.11 tai uudempi) ja selaimen.
+
+Tarkista Python-versio:
+
+```
+python3 --version
 ```
 
-### 2. Avaa repositorio VSCodessa
+Windowsissa komento on `python --version` tai `py --version`.
 
-Avaa VSCode, valitse **Open Folder** ja valitse kloonaamasi
-`ai-data-training`-hakemisto.
+## 6. Käyttö
 
-Tai vaihtoehtoisesti terminaalissa:
+Laske raportti:
 
-```powershell
-code .
+```
+python3 backend/build_report.py
 ```
 
-## Käyttöönotto
+Käynnistä palvelin:
 
-Valitse käyttöjärjestelmäsi mukainen ohje:
-
-- [Windows](#windows)
-- [macOS / Linux](#macos--linux)
-
-Molemmissa tarvitset Python 3.11:n tai uudemman. Asennus ei vaadi
-järjestelmänvalvojan oikeuksia.
-
-## Windows
-
-### 1. Asenna Python
-
-Jos Pythonia ei ole, asenna se Microsoft Storesta tai osoitteesta
-python.org (valitse "Install for current user").
-
-### 2. Asenna työkalut
-
-Avaa editorin terminaali ja suorita:
-
-```powershell
-py scripts/setup.py
+```
+python3 -m http.server --bind 127.0.0.1 --directory public 8000
 ```
 
-Jos `py` ei toimi, käytä komentoa `python scripts/setup.py`. Komento luo
-Python-virtuaaliympäristön `.venv` ja asentaa harjoituksissa tarvittavat
-riippuvuudet.
+Avaa selaimessa http://localhost:8000.
 
-### 3. Tarkista asennus
+## 7. Ajaminen
 
-```powershell
-py scripts/setup.py --verify
+Raportin ajaminen tapahtuu kahdessa vaiheessa. Ensin lasketaan raportti:
+
+```
+python3 backend/build_report.py
 ```
 
-### 4. Käytä ympäristöä
+Sitten käynnistetään palvelin:
 
-Aja komennot suoraan ympäristön Pythonilla. Aktivointia ei tarvita, ja se
-toimii myös silloin, kun PowerShell estää aktivointiskriptin:
-
-```powershell
-.venv\Scripts\python -m streamlit run harjoitukset/03-visualisoinnit/app.py
+```
+python3 -m http.server --bind 127.0.0.1 --directory public 8000
 ```
 
-## macOS / Linux
+Lopuksi avataan selaimessa osoite http://localhost:8000.
 
-### 1. Asenna työkalut
+## 8. Data
 
-Avaa editorin terminaali ja suorita:
+Data on peräisin Helsingin kaupungin avoimesta datasta. Lisätietoja datasta löytyy
+tiedostosta `data/README.md`. Data on julkaistu lisenssillä CC BY 4.0.
 
-```bash
-make setup
+## 9. Hakemistorakenne
+
+```
+.
+├── AGENTS.md
+├── PROJECT.md
+├── README.md
+├── backend/
+│   └── build_report.py
+├── backlog/
+├── data/
+│   ├── README.md
+│   └── onnettomuudet.csv
+├── public/
+│   ├── app.js
+│   ├── index.html
+│   └── report.json
+└── toimeksiannot/
 ```
 
-Komento luo Python-virtuaaliympäristön `.venv` ja asentaa harjoituksissa tarvittavat
-riippuvuudet.
+## 10. Usein kysytyt kysymykset
 
-### 2. Tarkista asennus
+**Miksi sivu ei aukea, kun avaan index.html-tiedoston suoraan?**
+Selain ei lataa `report.json`-tiedostoa suoraan tiedostojärjestelmästä. Käynnistä palvelin
+kohdan 7 ohjeiden mukaan.
 
-```bash
-make verify
-```
+**Voinko käyttää omaa dataani?**
+Kyllä, kunhan data on samassa muodossa.
 
-### 3. Käytä ympäristöä
+**Onko projekti valmis?**
+Projekti kehittyy jatkuvasti.
 
-Aktivoi virtuaaliympäristö:
+## 11. Tulevaisuuden visio
 
-```bash
-source .venv/bin/activate
-```
+Tulevaisuudessa projektista voi kasvaa kattava liikenneturvallisuusalusta, joka hyödyntää
+tekoälyä, reaaliaikaista dataa ja edistyneitä visualisointeja. Mahdollisia laajennuksia ovat
+esimerkiksi interaktiivinen kartta, ennustemallit, mobiilisovellus ja integraatiot muihin
+järjestelmiin. Visiona on tehdä liikenneturvallisuusdatasta kaikkien saatavilla olevaa.
+
+## 12. Kiitokset
+
+Kiitos kaikille projektiin osallistuneille ja Helsingin kaupungille avoimesta datasta! 🙏
