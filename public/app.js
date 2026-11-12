@@ -54,7 +54,7 @@ function showTypes(report) {
 
   if (laji) {
     const selected = document.getElementById("selected");
-    selected.innerHTML = "Valittu laji: " + (match ? match.label : laji);
+    selected.textContent = "Valittu laji: " + (match ? match.label : laji);
     selected.hidden = false;
   }
 

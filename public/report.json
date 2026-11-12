@@ -6,132 +6,132 @@
     {
       "year": 2000,
       "total": 3155,
-      "injury": 2452
+      "injury": 703
     },
     {
       "year": 2001,
       "total": 2874,
-      "injury": 2224
+      "injury": 650
     },
     {
       "year": 2002,
       "total": 2682,
-      "injury": 2079
+      "injury": 603
     },
     {
       "year": 2003,
       "total": 2419,
-      "injury": 1852
+      "injury": 567
     },
     {
       "year": 2004,
       "total": 2421,
-      "injury": 1862
+      "injury": 559
     },
     {
       "year": 2005,
       "total": 2474,
-      "injury": 1922
+      "injury": 552
     },
     {
       "year": 2006,
       "total": 2512,
-      "injury": 1994
+      "injury": 518
     },
     {
       "year": 2007,
       "total": 2635,
-      "injury": 2111
+      "injury": 524
     },
     {
       "year": 2008,
       "total": 2571,
-      "injury": 2009
+      "injury": 562
     },
     {
       "year": 2009,
       "total": 2294,
-      "injury": 1808
+      "injury": 486
     },
     {
       "year": 2010,
       "total": 3104,
-      "injury": 2559
+      "injury": 545
     },
     {
       "year": 2011,
       "total": 2838,
-      "injury": 2331
+      "injury": 507
     },
     {
       "year": 2012,
       "total": 3065,
-      "injury": 2600
+      "injury": 465
     },
     {
       "year": 2013,
       "total": 2489,
-      "injury": 2080
+      "injury": 409
     },
     {
       "year": 2014,
       "total": 2181,
-      "injury": 1801
+      "injury": 380
     },
     {
       "year": 2015,
       "total": 2063,
-      "injury": 1680
+      "injury": 383
     },
     {
       "year": 2016,
       "total": 2256,
-      "injury": 1886
+      "injury": 370
     },
     {
       "year": 2017,
       "total": 2052,
-      "injury": 1658
+      "injury": 394
     },
     {
       "year": 2018,
       "total": 2016,
-      "injury": 1654
+      "injury": 362
     },
     {
       "year": 2019,
       "total": 1718,
-      "injury": 1374
+      "injury": 344
     },
     {
       "year": 2020,
       "total": 905,
-      "injury": 613
+      "injury": 292
     },
     {
       "year": 2021,
       "total": 802,
-      "injury": 529
+      "injury": 273
     },
     {
       "year": 2022,
       "total": 786,
-      "injury": 548
+      "injury": 238
     },
     {
       "year": 2023,
       "total": 733,
-      "injury": 461
+      "injury": 272
     },
     {
       "year": 2024,
       "total": 755,
-      "injury": 466
+      "injury": 289
     },
     {
       "year": 2025,
       "total": 696,
-      "injury": 439
+      "injury": 257
     }
   ],
   "by_type": [
@@ -139,26 +139,26 @@
       "code": "MA",
       "label": "Moottoriajoneuvo",
       "total": 45375,
-      "injury": 40042
+      "injury": 5333
     },
     {
       "code": "PP",
       "label": "Polkupyörä",
       "total": 3697,
-      "injury": 1253
+      "injury": 2444
     },
     {
       "code": "JK",
       "label": "Jalankulkija",
       "total": 3254,
-      "injury": 731
+      "injury": 2523
     },
     {
       "code": "MP",
       "label": "Mopo tai moottoripyörä",
       "total": 2170,
-      "injury": 966
+      "injury": 1204
     }
   ],
-  "injury_share": 0.7889
+  "injury_share": 0.2111
 }
