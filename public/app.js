@@ -70,6 +70,10 @@ function showTypes(report) {
   }
 }
 
+function showSource(report) {
+  document.querySelector("footer").textContent = `Lähde: ${report.source}. Lisenssi: ${report.license}.`;
+}
+
 async function main() {
   try {
     const response = await fetch("./report.json");
@@ -77,6 +81,7 @@ async function main() {
     showKpis(report);
     drawYears(report);
     showTypes(report);
+    showSource(report);
   } catch (error) {
     const message = document.getElementById("message");
     message.textContent = "Raporttia ei voitu ladata. Avaa sivu palvelimen kautta: http://localhost:8000 (ks. .github/instructions/report.instructions.md).";

@@ -1,5 +1,5 @@
 ---
-status: todo
+status: done
 priority: high
 ---
 # Lisää datan lähde ja lisenssi sivun alaosaan
@@ -9,3 +9,6 @@ tiedostossa `report.json` (kentät `source` ja `license`); näytä ne sivun alat
 Ei vaadi raportin ajoa.
 
 Valmis, kun sivun alaosassa lukee lähde ja lisenssi.
+
+## Notes
+- 2026-11-17: lähde ja lisenssi näytetään alatunnisteessa tiedostosta report.json.
